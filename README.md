@@ -1,27 +1,17 @@
-# Introduction
+# Instagram Profile Downloader
 
-This is a Docker playground for the `instaloader` tool.
+This script fully downloads any public Instagram profiles defined in the `profiles.txt` file.
 
-# Running via docker-compose
+## Prerequisites
 
-    docker-compose build
-    docker-compose up -d
-    docker attach instaloader
+- Docker
 
-# Running via docker
+## Running
 
-    docker build -t instaloader .
-    docker run -dit --name instaloader instaloader
-    docker attach instaloader
+Define the profiles to download in `profiles.txt`. One username per line.
 
-# References
+The following command will build the docker container and execute the script.
 
-https://instaloader.github.io/installation.html#install
-
-https://docs.docker.com/engine/reference/commandline/attach/
-
-https://docs.docker.com/engine/reference/run/
-
-https://hub.docker.com/_/python
-
-
+    docker-compose up --build
+    
+The profiles will be directory separated in the `output` folder.

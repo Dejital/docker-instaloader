@@ -6,4 +6,4 @@ services:
     tty: true           # docker run -t
     build: .
     volumes:
-      - ./output:/app   # host_folder:docker_folder
+      - ./output:/app/output   # host_folder:docker_folder
